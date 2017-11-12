@@ -13,7 +13,15 @@ use pocketmine\utils\TextFormat;
 use pocketmine\utils\Config;
 use pocketmine\permission\ServerOperator;
 
-//Coded by CookieCode
+ /**
+ *  _____   ______   ______   _  _   _   ______
+ * |  _ _| |  __  | |  __  | | |/ / |_| |  ____|
+ * | |     |      | | |  | | |   /   _  | |___
+ * | |     | |  | | | |  | | |  (   | | |  ___|
+ * | |_ _  | |__| | | |__| | |   \  | | | |____
+ * |_____| |______| |______| |_|\_\ |_| |______|
+ * Coded by Cookie.
+**/
 
 class Main extends PluginBase implements Listener{
 	
@@ -27,7 +35,7 @@ class Main extends PluginBase implements Listener{
         $this->getLogger()->info(TextFormat::RED . "ReportPE disabled.");
     }
 	
-    public function onCommand(CommandSender $sender, Command $command, $label, array $args){
+    public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool{
         switch($command->getName()){
 			
             case "report":
@@ -83,7 +91,7 @@ class Main extends PluginBase implements Listener{
             case "reportpe":
                 $sender->sendMessage(TextFormat::YELLOW."------------");
                 $sender->sendMessage(TextFormat::GREEN."ReportPE created by CookieCode. Twitter : @ImCookieGame");
-                $sender->sendMessage(TextFormat::RED."Youtube : ImCookieGame");
+                $sender->sendMessage(TextFormat::RED."Youtube : Cookiz);
                 $sender->sendMessage(TextFormat::YELLOW."------------");
 				return true;
 			}
